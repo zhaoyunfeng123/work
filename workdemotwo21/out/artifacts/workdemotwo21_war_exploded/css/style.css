@@ -1,0 +1,29 @@
+.div_book_title{
+    text-align: center;
+    font-size: large;
+}
+.div_left{
+    margin: 3px;
+    float: left;
+    width: 100px;
+    border: 1px solid #B1D1CE;
+    background-color: #F3F3F3;
+    text-align: center;
+}
+.div_right{
+    width: 700px;
+    background-color: #F3F3F3;
+}
+.tab-title{
+    margin: 5px;
+}
+a{text-decoration: none}
+a:hover{text-decoration: none}
+th{
+    width: 100px;
+    height: 40px;
+}
+table{
+    text-align:center;
+    height: 30px;
+}
