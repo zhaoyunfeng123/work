@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>书香商城</title>
+    <script type="text/javascript" src="jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="js/adminIndex.js"></script>
+    <script>
+        //开始
+        $(function () {
+            //载入所有图书
+            listAllBook(pageNumber, size);
+        });
+    </script>
+    <style>
+        .div_left {
+            margin: 3px;
+            float: left;
+            width: 100px;
+            border: 1px solid #B1D1CE;
+            background-color: #F3F3F3;
+            text-align: center;
+        }
+
+        .div_right {
+            width: 700px;
+            background-color: #F3F3F3;
+        }
+
+        .tab-title {
+            margin: 5px;
+        }
+
+        a {
+            text-decoration: none
+        }
+
+        a:hover {
+            text-decoration: none
+        }
+
+        th {
+            width: 120px;
+            height: 60px;
+        }
+
+        table {
+            text-align: center;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <!--左侧导航栏-->
+    <div class="div_left">
+        <p><a href="/adminIndex.html">图书列表</a></p>&nbsp;&nbsp;&nbsp;
+        <p><a href="/addBook.html">新增图书</a></p>&nbsp;&nbsp;&nbsp;
+        <p><a href="/selectIndex.html">搜索图书</a></p>&nbsp;&nbsp;&nbsp;
+        <p><a href="">批量导入图书</a></p>&nbsp;&nbsp;&nbsp;
+        <p><a href="">退出系统</a></p>&nbsp;&nbsp;&nbsp;
+    </div>
+    <!--右侧，详细信息-->
+    <div class="div_right">
+        <div class="tab-title">图书列表</div>
+        <table id="books" class="tab-list" border="1">
+            <thead>
+            <tr>
+                <th>书名</th>
+                <th>价格</th>
+                <th>库存</th>
+                <th>作者</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <!--    分页布局-->
+        <br/>
+        <div class="paging">
+            <table>
+                <tr class="page-font">
+                    <td><a href="#" id="firstPage" onclick="page_click(this)">首页</a></td>
+                    <td>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" id="beforePage" onclick="page_click(this)">上一页</a></td>
+                    <td>&nbsp;&nbsp;|&nbsp;&nbsp;第<input type="button" id="currentPage" value="1" readonly="readonly">页
+                    </td>
+                    <td>&nbsp;&nbsp;|&nbsp;&nbsp;共<input type="button" id="totalPage" value="1" readonly="readonly">页
+                    </td>
+                    <td>&nbsp;&nbsp;|&nbsp;&nbsp;<input type="text" id="jumpPageValue" style="width: 20px">
+                        &nbsp;<a href="#" id="jumpPage" onclick="page_click(this)">跳转</a></td>
+                    <td>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" id="nextPage" onclick="page_click(this)">下一页</a></td>
+                    <td>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" id="lastPage" onclick="page_click(this)">尾页</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="div_update" id="div_update"></div>
+</body>
+</html>

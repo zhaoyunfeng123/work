@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>书香商城</title>
+    <script type="text/javascript" src="jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="js/cart.js"></script>
+    <script>
+        //开始
+        $(function () {
+            //首次载入购物车所有信息
+            allGoods();
+            //开启定时任务：每隔1秒刷洗一次
+            setInterval(function () {
+                allGoods();
+            },1000);
+        });
+    </script>
+    <style>
+        .div_left{
+            margin: 3px;
+            float: left;
+            width: 100px;
+            border: 1px solid #B1D1CE;
+            background-color: #F3F3F3;
+            text-align: center;
+        }
+        .div_right{
+            width: 700px;
+            background-color: #F3F3F3;
+        }
+        .tab-title{
+            margin: 5px;
+        }
+        a{text-decoration: none}
+        a:hover{text-decoration: none}
+        th{
+            width: 100px;
+            height: 40px;
+        }
+        table{
+            text-align:center;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div class="div_left">
+        <p><a href="/index.html">图书列表</a></p>&nbsp;&nbsp;&nbsp;
+        <p><a href="/selectIndex.html">搜索图书</a></p>&nbsp;&nbsp;&nbsp;
+        <p><a href="/personalCenter.html">个人中心</a></p>&nbsp;&nbsp;&nbsp;
+        <p><a href="/cart.html">购物车</a></p>&nbsp;&nbsp;&nbsp;
+        <p><a href="">退出系统</a></p>&nbsp;&nbsp;&nbsp;
+    </div>
+    <div class="div_right">
+        <div class="tab-title">购物车</div>
+        <div id="tabResult"></div>
+        <div id="tabButton" style="text-align: center"></div>
+        <div id="tabAddress"></div>
+    </div>
+</div>
+</body>
+</html>

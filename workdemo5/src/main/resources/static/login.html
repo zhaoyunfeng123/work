@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <script type="text/javascript" src="jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+</head>
+<body onload="createCode()">
+    <p>用户名：<input type="text" id="username" name="username"></p>
+    <p>密码：<input type="password" id="password" name="password"></p>
+    <p>验证码：<input type="text" id="checkCode" name="checkCode">
+        <input type="text" id="refreshCode" class="unchanged" style="width: 80px;border: 0px" onclick="createCode()" readonly="readonly">
+    </p>
+    <p>
+        <input type="radio" id="adminLogin" name="userType" value="0" checked="checked">管理员&nbsp;&nbsp;&nbsp;
+        <input type="radio" id="userLogin" name="userType" value="1">用户
+    </p>
+    <p><input type="button" id="submit" name="submit" value="登录" onclick="login()"></p>
+    <p><a href="/register.html">注册</a></p>
+</body>
+</html>
